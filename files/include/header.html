@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+        <a class="navbar-brand logo logo-link" href="index.html">ТУТ ЛОГО</a>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Главная <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="blog.html">Блог</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="video.html">Видео</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Контакты</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<script>
+    $('.navbar-toggler').click(() => {
+        $('nav').toggleClass('background-dark');
+    })
+
+    $(window).resize(() => {
+        if ($(window).width() > 992) {
+            $('nav').removeClass('background-dark')
+        } else if ($('#navbarSupportedContent').hasClass('show')) {
+            $('nav').addClass('background-dark');
+        }
+    })
+</script>
